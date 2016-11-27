@@ -5,7 +5,7 @@ function MusicPlayer (songList) {
 	this.songList = []
 	this.addSongList = function (newSongList) {
 		this.songList.push(newSongList);
-		document.getElementById("current").addEventListener("load", function() {
+		document.getElementById("current").addEventListener("click", function() {
 			audioElement.innerHTML = "<audio src='FallOnMe.mp3' controls></audio>";
 		}
 		)
