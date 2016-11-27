@@ -9,6 +9,11 @@ function MusicPlayer (songList) {
 			audioElement.innerHTML = "<audio src='FallOnMe.mp3' controls></audio>";
 		}
 		)
+		document.getElementById("current").addEventListener("click", function() {
+			audioElement.play();
+		}
+		)
+
 	}
 	
 
