@@ -1,20 +1,16 @@
-var audioElement = document.getElementsByTagName("audio")[0];
+var audioElement = document.getElementById("songPlayer");
 
-	
 
 function MusicPlayer (songList) {
 	this.songList = []
 	this.addSongList = function (newSongList) {
 		this.songList.push(newSongList);
-		document.getElementById("current").addEventListener("click", function() {
-			audioElement.play();
+		document.getElementById("current").addEventListener("load", function() {
+			audioElement.innerHTML = "<audio src='FallOnMe.mp3' controls></audio>";
 		}
 		)
 	}
-		
-	this.loadSong = function (){
-
-	}
+	
 
 	// this.loadSong = function (firstSong) {
 	// 	var audioElement = document.createElement('audio');
