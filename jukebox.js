@@ -1,24 +1,37 @@
+var audioElement = document.getElementsByTagName("audio")[0];
+
+	
+
 function MusicPlayer (songList) {
 	this.songList = []
 	this.addSongList = function (newSongList) {
 		this.songList.push(newSongList);
+		document.getElementById("current").addEventListener("click", function() {
+			audioElement.play();
+		}
+		)
 	}
-	this.loadSong = function (firstSong) {
-		var audioElement = document.createElement('audio');
-		audioElement.setAttribute("controls", "controls");
-		audioElement.setAttribute('src', this.songList[3]);
-		document.body.appendChild(audioElement);
-		audioElement.play();
+		
+	this.loadSong = function (){
+
 	}
-	
-	// this.playFirst = function (song) {
-	// 	var playSong = document.getElementsByTagName("audio")[0];
-	// 	playSong.play();
+
+	// this.loadSong = function (firstSong) {
+	// 	var audioElement = document.createElement('audio');
+	// 	audioElement.setAttribute("controls", "controls");
+	// 	audioElement.setAttribute('src', this.songList[0]);
+	// 	document.body.appendChild(audioElement);
+	// 	audioElement.autoPlay = true;
+	// 	audioElement.play();
+	// 	window.addEventListener("load", this.loadSong);
 	// }
 	
 }
 
+
+
 var jukeBox = new MusicPlayer ();
+
 
 var fallOnMe = "FallOnMe.mp3";
 var gardeningAtNight = "GardeningAtNight.mp3"; 
