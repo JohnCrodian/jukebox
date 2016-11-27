@@ -5,17 +5,32 @@ function MusicPlayer (songList) {
 	this.songList = []
 	this.addSongList = function (newSongList) {
 		this.songList.push(newSongList);
-		document.getElementById("current").addEventListener("click", function() {
-			audioElement.innerHTML = "<audio src='FallOnMe.mp3' controls></audio>";
-		}
-		)
-		document.getElementById("current").addEventListener("click", function() {
-			audioElement.play();
-		}
-		)
-
 	}
-	
+
+	this.fall = document.getElementById("fall").addEventListener("click", function() {
+	audioElement.innerHTML = "<audio id='playBar' src=fallOnMe controls></audio>";
+	document.getElementById("nowPlaying").innerHTML = "Now Playing: Fall on Me by R.E.M.";
+})
+
+	this.gardening = document.getElementById("gardening").addEventListener("click", function() {
+	audioElement.innerHTML = "<audio id='playBar' src='GardeningAtNight.mp3' controls></audio>";
+	document.getElementById("nowPlaying").innerHTML = "Now Playing: Gardening at Night by R.E.M.";
+})
+	this.girlfriend = document.getElementById("girlfriend").addEventListener("click", function() {
+	audioElement.innerHTML = "<audio id='playBar' src='GirlfriendInAComa.mp3' controls></audio>";
+	document.getElementById("nowPlaying").innerHTML = "Now Playing: Girlfriend in a Coma by the Smiths";
+})
+	this.nightswimming = document.getElementById("nightswimming").addEventListener("click", function() {
+	audioElement.innerHTML = "<audio id='playBar' src='NightSwimming.mp3' controls></audio>";
+	document.getElementById("nowPlaying").innerHTML = "Now Playing: Nightswimming by R.E.M.";
+})
+	this.nightswimming = document.getElementById("panic").addEventListener("click", function() {
+	audioElement.innerHTML = "<audio id='playBar' src='Panic.mp3' controls></audio>";
+	document.getElementById("nowPlaying").innerHTML = "Now Playing: Panic by the Smiths";
+})
+	this.playSong = document.getElementById("current").addEventListener("click", function () {
+		document.getElementById("playBar").play();
+	})
 
 	// this.loadSong = function (firstSong) {
 	// 	var audioElement = document.createElement('audio');
@@ -26,6 +41,11 @@ function MusicPlayer (songList) {
 	// 	audioElement.play();
 	// 	window.addEventListener("load", this.loadSong);
 	// }
+
+// 			document.getElementById("current").addEventListener("click", function() {
+// 			audioElement.innerHTML = "<audio id='playBar' src='FallOnMe.mp3' controls></audio>";
+// }
+// )
 	
 }
 
