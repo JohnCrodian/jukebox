@@ -10,8 +10,7 @@ function MusicPlayer (songList) {
 	this.fall = document.getElementById("fall").addEventListener("click", function() {
 	audioElement.innerHTML = "<audio id='playBar' src='FallOnMe.mp3' controls autoPlay=true></audio>";
 	document.getElementById("nowPlaying").innerHTML = "Now Playing: Fall on Me by R.E.M.";
-	})
-
+		})
 	this.gardening = document.getElementById("gardening").addEventListener("click", function() {
 		audioElement.innerHTML = "<audio id='playBar' src='GardeningAtNight.mp3' controls autoPlay=true></audio>";
 		document.getElementById("nowPlaying").innerHTML = "Now Playing: Gardening at Night by R.E.M.";
@@ -35,6 +34,8 @@ function MusicPlayer (songList) {
 		document.getElementById("playBar").pause()
 	})
 
+}
+
 	// this.loadSong = function (firstSong) {
 	// 	var audioElement = document.createElement('audio');
 	// 	audioElement.setAttribute("controls", "controls");
@@ -50,7 +51,6 @@ function MusicPlayer (songList) {
 // }
 // )
 	
-}
 
 
 var jukeBox = new MusicPlayer ();
